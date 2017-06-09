@@ -8,4 +8,4 @@ spring:
     database-platform: org.hibernate.dialect.Oracle10gDialect
 server:
   port: 4048
-  contextPath: /orchestrator-rest
+  contextPath: /orchestrator-tshark
