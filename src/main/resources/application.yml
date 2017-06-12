@@ -5,7 +5,7 @@ spring:
     password: ${database.password}
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
-    database-platform: org.hibernate.dialect.Oracle10gDialect
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 server:
   port: 4048
   contextPath: /orchestrator-tshark

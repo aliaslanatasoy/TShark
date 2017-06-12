@@ -14,9 +14,8 @@
     </parent>
 <dependencies>
     <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>5.1.6</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -37,78 +36,14 @@
         <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
     <dependency>
-        <groupId>org.springframework.mobile</groupId>
-        <artifactId>spring-mobile-device</artifactId>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.6</version>
     </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.10.5.RELEASE</version>
     </dependency>
 </dependencies>
     <build>
@@ -124,7 +59,7 @@
             <configuration>
                 <url>http://serveradress.com/manager/text</url>
                 <server>TomcatServer-for-TShark</server>
-                <path>/orchestrator-rest</path>
+                <path>/orchestrator-tshark</path>
             </configuration>
         </plugin>
     </plugins>
