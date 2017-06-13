@@ -13,4 +13,5 @@ import java.util.List;
 @Repository
 public interface BugRepository extends JpaRepository<BugEntity,String> {
     List<BugEntity> findAll();
+    List<BugEntity> findBugEntitiesByNameIsLike(String name);
 }

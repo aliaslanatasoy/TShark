@@ -21,4 +21,9 @@ public class BugService {
         List<BugEntity> bugEntities = bugRepository.findAll();
         return bugEntities;
     }
+
+    public List<BugEntity> findBugByNameLike(String name){
+        List<BugEntity> bugEntities = bugRepository.findBugEntitiesByNameIsLike("%" + name + "%");
+        return bugEntities;
+    }
 }

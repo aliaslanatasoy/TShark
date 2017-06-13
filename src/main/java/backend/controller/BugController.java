@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -20,9 +21,15 @@ public class BugController {
     @Autowired
     private BugService bugService;
 
-    @RequestMapping(value = "/get/all",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/find/all",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
     public List<BugEntity> getAllBugs(){
         List<BugEntity> bugEntities = bugService.getAllBugsByCdate();
+        return  bugEntities;
+    }
+
+    @RequestMapping(value = "/find/name-like",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<BugEntity> findByNameLike(@RequestParam(name = "name") String name){
+        List<BugEntity> bugEntities = bugService.findBugByNameLike(name);
         return  bugEntities;
     }
 }
