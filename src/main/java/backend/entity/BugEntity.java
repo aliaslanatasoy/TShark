@@ -1,6 +1,9 @@
 package backend.entity;
 
+import org.hibernate.annotations.SQLInsert;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,18 +11,18 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "bug",schema = "tshark")
-public class BugEntity {
+public class BugEntity implements Serializable{
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "BUG_ID", nullable = false)
-    private Long bugId;
+    private int bugId;
 
     @Basic
-    @Column(name = "NAME", nullable = false)
+    @Column(name = "BUG_NAME", nullable = false)
     private String name;
 
     @Basic
-    @Column(name = "DESC", nullable = true)
+    @Column(name = "BUG_DESC", nullable = true)
     private String desc;
 
     @Basic
@@ -45,11 +48,11 @@ public class BugEntity {
     @Column(name = "UUSER", nullable = true)
     private String uUser;
 
-    public Long getBugId() {
+    public int getBugId() {
         return bugId;
     }
 
-    public void setBugId(Long bugId) {
+    public void setBugId(int bugId) {
         this.bugId = bugId;
     }
 

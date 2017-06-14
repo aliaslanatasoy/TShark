@@ -2,9 +2,11 @@ package backend.repository;
 
 import backend.entity.BugEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.Entity;
+import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,6 +14,12 @@ import java.util.List;
  */
 @Repository
 public interface BugRepository extends JpaRepository<BugEntity,String> {
+
     List<BugEntity> findAll();
+
     List<BugEntity> findBugEntitiesByNameIsLike(String name);
+
+    BugEntity findBugEntityByBugId(int bugId);
+
 }
+
